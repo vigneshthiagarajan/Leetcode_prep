@@ -1,2 +1,3 @@
 # Leetcode_prep
-My solutions for leetcode coding problems as part of interview preparation.
+This is to document my interview preparation process for problem solving on the Leetcode platform.
+My solutions for leetcode coding problems are stored here as separate files.
