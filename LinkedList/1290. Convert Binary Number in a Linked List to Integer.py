@@ -9,5 +9,6 @@ class Solution:
         while(head!=None):
             string_repr += str(head.val)
             head = head.next
-        return int(string_repr, 2)
+        dec_val = int(string_repr, 2)
+        return dec_val
         
