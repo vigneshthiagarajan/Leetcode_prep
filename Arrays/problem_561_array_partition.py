@@ -1,3 +1,4 @@
 class Solution:
     def arrayPairSum(self, nums: List[int]) -> int:
-        return sum(sorted(nums)[::2])
+        max_sum = sum(sorted(nums)[::2])
+        return max_sum
