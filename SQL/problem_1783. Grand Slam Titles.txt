@@ -1,0 +1,15 @@
+# Write your MySQL query statement below
+
+
+with temp AS (
+SELECT Wimbledon AS player_id FROM Championships
+UNION ALL SELECT Fr_open AS player_id FROM Championships
+UNION ALL SELECT US_open AS player_id FROM Championships
+UNION ALL SELECT Au_open AS player_id From Championships
+)
+
+SELECT temp.player_id, p.player_name, COUNT(*) AS grand_slams_count
+FROM temp
+LEFT JOIN Players p
+ON temp.player_id=p.player_id
+GROUP BY temp.player_id;
