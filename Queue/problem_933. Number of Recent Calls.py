@@ -7,8 +7,8 @@ class RecentCounter:
         # Add to queue
         self.request_times.append(t)
 
-        # Delete unnecessary elements from left (Since we always have increasing order of request
-        # times
+        # Delete unnecessary elements from left (Since we always have increasing order
+        # of request the times
         while t - self.request_times[0] > 3000:
             self.request_times.popleft()
 
