@@ -1,0 +1,22 @@
+# # Write your MySQL query statement below
+
+# WITH TEMP AS (SELECT CUSTOMER_ID, SUM(PRICE) AS TOTAL FROM ORDERS O LEFT OUTER JOIN PRODUCT P ON P.PRODUCT_ID=O.PRODUCT_ID WHERE ORDER_DATE LIKE '2020-06%' GROUP BY CUSTOMER_ID)
+# SELECT DISTINCT C.CUSTOMER_ID, C.NAME FROM TEMP T JOIN CUSTOMERS C WHERE TOTAL>=100;
+
+SELECT T.customer_id, T.name
+FROM
+(
+SELECT O.customer_id, C.name, SUM(O.quantity * P.price) AS total
+FROM
+(SELECT *
+FROM orders
+WHERE order_date BETWEEN "2020-06-01" AND "2020-07-31") AS O
+JOIN Customers AS C
+ON O.customer_id = C.customer_id
+JOIN Product AS P
+ON O.product_id = P.product_id
+GROUP BY O.customer_id, DATE_FORMAT(O.order_date,'%Y-%m')
+HAVING total >= 100
+) AS T
+GROUP BY T.customer_id
+HAVING COUNT(*) > 1
