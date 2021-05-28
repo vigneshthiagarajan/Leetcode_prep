@@ -1,0 +1,9 @@
+# Write your MySQL query statement below
+
+WITH T1 AS (SELECT T1.SALE_DATE, T1.SOLD_NUM FROM SALES T1 WHERE FRUIT LIKE "APPLES")
+SELECT T2.SALE_DATE, (T1.SOLD_NUM-T2.SOLD_NUM) AS DIFF FROM SALES T2 JOIN T1 ON T1.SALE_DATE = T2.SALE_DATE WHERE T2.FRUIT LIKE "ORANGES" GROUP BY SALE_DATE;
+
+# SELECT t1.sale_date as SALE_DATE, (t1.sold_num - t2.sold_num) as DIFF
+# from SALES t1 join sales t2 on t1.sale_date = t2.sale_date
+# WHERE t1.fruit like 'apples' and t2.fruit like 'oranges'
+# group by sale_date
