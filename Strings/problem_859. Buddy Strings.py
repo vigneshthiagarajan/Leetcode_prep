@@ -12,12 +12,20 @@ class Solution:
             for a in s:
                 if a in existing:
                     return True
-                existing.add(s)
+                existing.add(a)
             return False
 
         pairs = []
-
         for i, j in zip(s, goal):
-            print(i, j)
+            print(pairs)
+            if (i != j):
+                pairs.append([i, j])
+            if (len(pairs) > 2):
+                return False
+
+        if (len(pairs) == 2):
+            if (pairs[0] == pairs[1][::-1]):
+                return True
+        return False
 
 
