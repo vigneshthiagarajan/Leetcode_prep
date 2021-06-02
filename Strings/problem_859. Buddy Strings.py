@@ -15,6 +15,9 @@ class Solution:
                 existing.add(a)
             return False
 
+        # Otherwise make sure there are exactly two pairs of
+        # Different characters existing ebtween the two strings which are
+        # The reverse of each other
         pairs = []
         for i, j in zip(s, goal):
             print(pairs)
