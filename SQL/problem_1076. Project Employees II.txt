@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select project_id from (select project_id, count(employee_id) as count_employees from project group by project_id) t1 where t1.count_employees = (select max(count_employees) from (select project_id, count(employee_id) as count_employees from project group by project_id) t2);
