@@ -8,6 +8,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
 class Solution {
     public ListNode deleteNodes(ListNode head, int m, int n) {
         ListNode current = head;
