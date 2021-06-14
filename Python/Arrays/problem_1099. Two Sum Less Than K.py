@@ -1,7 +1,7 @@
 class Solution:
     def twoSumLessThanK(self, nums: List[int], k: int) -> int:
 
-        #         # Brute force
+        ##  Brute force
         #         req = -1
         #         for i in range(0, len(nums)):
         #             for j in range(i+1, len(nums)):
@@ -10,7 +10,7 @@ class Solution:
         #                     req = sum_of_two
         #         return req
 
-        # Two pointers
+        ## Two pointers
         nums.sort()
         pointer1 = 0
         pointer2 = len(nums)-1
