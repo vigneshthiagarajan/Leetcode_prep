@@ -5,3 +5,7 @@ class Solution:
         s_counter = collections.Counter(s)
         t_counter = collections.Counter(t)
         return s_counter == t_counter
+        
+        # Alternate with sorting
+        #return sorted(s) == sorted(t)
+        
