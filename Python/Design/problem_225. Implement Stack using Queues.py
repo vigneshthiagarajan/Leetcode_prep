@@ -24,7 +24,7 @@ class MyStack:
         """
         while(self.q1.qsize() > 1):
             self.top_element = self.q1.get()
-            self.q2.put(self.top)
+            self.q2.put(self.top_element)
         
         rem = self.q1.get()
         temp_q = self.q1
