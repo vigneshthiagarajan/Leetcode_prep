@@ -8,8 +8,11 @@ class Solution:
             number = number[3:]
         if(len(number) == 4):
             return output_string + number[:2] + "-" + number[2:]
-        elif(len(number) == 3):
-            return output_string + number
+        # elif(len(number) == 3):
+        #     return output_string + number
+        # else:
+        #     return output_string + number
+        # Decomposing above to single case
         else:
             return output_string + number
         
