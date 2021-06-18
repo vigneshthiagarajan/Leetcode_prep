@@ -3,7 +3,6 @@ class Solution:
         to_do = num
         bit = 1
         while(to_do):
-            print(num, bit, to_do)
             num = num ^ bit
             bit = bit << 1
             to_do = to_do >> 1
