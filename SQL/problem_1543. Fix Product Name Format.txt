@@ -1,0 +1,4 @@
+# Write your MySQL query statement below
+
+select trim(lower(PRODUCT_NAME)) as PRODUCT_NAME, date_format(sale_date, "%Y-%m") as SALE_DATE, count(*) as TOTAL from Sales group by 1, 2 order by 1, 2;
+
