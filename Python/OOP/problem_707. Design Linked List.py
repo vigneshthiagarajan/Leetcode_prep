@@ -5,7 +5,6 @@ class ListNode:
 
 
 class MyLinkedList:
-
     def __init__(self):
         """
         Initialize your data structure here.

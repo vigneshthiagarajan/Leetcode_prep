@@ -1,5 +1,4 @@
 class RecentCounter:
-
     def __init__(self):
         self.request_times = deque()
 
@@ -13,6 +12,7 @@ class RecentCounter:
             self.request_times.popleft()
 
         return len(self.request_times)
+
 
 # Your RecentCounter object will be instantiated and called as such:
 # obj = RecentCounter()

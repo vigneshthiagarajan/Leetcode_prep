@@ -5,6 +5,7 @@ class Solution:
         squared.sort()
         return squared
 
+
 #         # Two pointer
 #         negatives = [i for i in nums if i<0]
 #         positives = [i for i in nums if i>=0]

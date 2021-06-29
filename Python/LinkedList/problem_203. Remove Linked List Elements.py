@@ -9,7 +9,7 @@ class Solution:
         sentinel.next = head
         prev = sentinel
         curr = head
-        while(curr != None):
+        while curr != None:
             if curr.val == val:
                 prev.next = curr.next
             else:

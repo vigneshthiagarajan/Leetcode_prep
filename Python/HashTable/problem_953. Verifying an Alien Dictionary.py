@@ -12,8 +12,8 @@ class Solution:
                 if j > len(words[i + 1]) - 1:
                     return False
 
-                if words[i][j] != words[i+1][j]:
-                    if order_chars[words[i][j]] > order_chars[words[i+1][j]]:
+                if words[i][j] != words[i + 1][j]:
+                    if order_chars[words[i][j]] > order_chars[words[i + 1][j]]:
                         return False
                     break
         return True

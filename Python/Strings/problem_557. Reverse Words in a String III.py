@@ -9,4 +9,3 @@ class Solution:
             else:
                 return_string += word[::-1] + " "
         return return_string
-

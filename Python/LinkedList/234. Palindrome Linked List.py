@@ -4,14 +4,14 @@
 #         self.val = val
 #         self.next = next
 
+
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         string_repr = ""
-        while(head!=None):
+        while head != None:
             string_repr += str(head.val)
             head = head.next
-        if string_repr[::-1]==string_repr:
+        if string_repr[::-1] == string_repr:
             return True
         else:
             return False
-        

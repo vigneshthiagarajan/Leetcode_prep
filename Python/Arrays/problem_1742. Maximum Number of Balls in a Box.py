@@ -8,6 +8,4 @@ class Solution:
             else:
                 mapper[ball_sum_digits] += 1
         max_box = max(mapper.values())
-        return max_box            
-            
-        
+        return max_box

@@ -10,11 +10,11 @@ class Solution:
         inorder(root, list_node_vals)
         pointer1 = 0
         pointer2 = len(list_node_vals) - 1
-        while (pointer1 != pointer2):
+        while pointer1 != pointer2:
             total = list_node_vals[pointer1] + list_node_vals[pointer2]
-            if (total == k):
+            if total == k:
                 return True
-            if (total < k):
+            if total < k:
                 pointer1 += 1
             else:
                 pointer2 -= 1
@@ -22,7 +22,7 @@ class Solution:
 
 
 def inorder(root, list_node_vals):
-    if (root == None):
+    if root == None:
         return
     inorder(root.left, list_node_vals)
     list_node_vals.append(root.val)

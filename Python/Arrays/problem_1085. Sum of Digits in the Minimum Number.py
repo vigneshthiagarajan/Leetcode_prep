@@ -4,7 +4,6 @@ class Solution:
         sum_digits = 0
         for i in str(min_number):
             sum_digits += int(i)
-        if(sum_digits % 2 == 1):
+        if sum_digits % 2 == 1:
             return 0
         return 1
-        

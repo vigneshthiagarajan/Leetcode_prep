@@ -7,4 +7,3 @@ class Solution:
             if sumHeight > maxHeight:
                 maxHeight = sumHeight
         return maxHeight
-

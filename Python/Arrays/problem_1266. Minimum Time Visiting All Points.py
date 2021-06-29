@@ -6,4 +6,3 @@ class Solution:
             dy = abs(points[i + 1][1] - points[i][1])
             min_time += max(dx, dy)
         return min_time
-

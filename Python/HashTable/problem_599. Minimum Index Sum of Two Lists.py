@@ -46,14 +46,14 @@ class Solution:
 
         # For list 1
         for idx, restaurant in enumerate(list1):
-            if(restaurant not in restaurant_pairs):
+            if restaurant not in restaurant_pairs:
                 restaurant_pairs[restaurant] = [idx]
             else:
                 restaurant_pairs[restaurant].append(idx)
 
         # For list 2
         for idx, restaurant in enumerate(list2):
-            if(restaurant in restaurant_pairs):
+            if restaurant in restaurant_pairs:
                 restaurant_pairs[restaurant].append(idx)
 
         for restaurant, indices in list(restaurant_pairs.items()):
@@ -72,7 +72,7 @@ class Solution:
         return_list = []
 
         for restaurant, index_sum in restaurant_pairs.items():
-            if(index_sum == min_index_sum):
+            if index_sum == min_index_sum:
                 return_list.append(restaurant)
 
         return return_list

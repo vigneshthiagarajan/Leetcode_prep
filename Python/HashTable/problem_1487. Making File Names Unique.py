@@ -9,7 +9,7 @@ class Solution:
                 new_names.append(name)
             else:
                 mod_name = name + "(" + str(present_names[name]) + ")"
-                while(mod_name in present_names):
+                while mod_name in present_names:
                     present_names[name] += 1
                     mod_name = name + "(" + str(present_names[name]) + ")"
                 present_names[mod_name] = 1

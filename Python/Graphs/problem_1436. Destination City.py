@@ -5,6 +5,6 @@ class Solution:
             dictionaryCities[paths[i][0]] = paths[i][1]
 
         current_city = paths[0][0]
-        while (current_city in dictionaryCities):
+        while current_city in dictionaryCities:
             current_city = dictionaryCities[current_city]
         return current_city

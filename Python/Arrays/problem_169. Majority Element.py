@@ -3,7 +3,6 @@ class Solution:
         nums_counts = collections.Counter(nums)
         n = len(nums)
         for key, value in nums_counts.items():
-            if value > math.floor(n/2):
+            if value > math.floor(n / 2):
                 return key
         return -1
-        

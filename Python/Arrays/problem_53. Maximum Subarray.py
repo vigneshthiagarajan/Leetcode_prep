@@ -16,7 +16,3 @@ class Solution:
             current_sub = max(current_sub + num, num)
             max_sub = max(max_sub, current_sub)
         return max_sub
-
-
-
-

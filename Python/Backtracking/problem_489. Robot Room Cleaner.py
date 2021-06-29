@@ -30,6 +30,7 @@
 #        :rtype void
 #        """
 
+
 class Solution:
     def cleanRoom(self, robot):
         """
@@ -50,15 +51,17 @@ class Solution:
 
             for i in range(4):
                 new_direction = (d + i) % 4
-                new_cell = (cell[0] + directions[new_direction]
-                            [0], cell[1] + directions[new_direction][1])
+                new_cell = (
+                    cell[0] + directions[new_direction][0],
+                    cell[1] + directions[new_direction][1],
+                )
                 if not new_cell in visited and robot.move():
                     backtracking_spiral(new_cell, new_direction)
                     return_back()
 
                 robot.turnRight()
 
-       # Order is up, right, down, left
+        # Order is up, right, down, left
         directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]
         visited = set()
         backtracking_spiral()

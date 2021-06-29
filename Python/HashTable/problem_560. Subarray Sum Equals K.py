@@ -29,7 +29,7 @@ class Solution:
         mapper[0] = 1
         for i in range(len(nums)):
             cum_sum += nums[i]
-            if(cum_sum - k in mapper):
+            if cum_sum - k in mapper:
                 count += mapper[cum_sum - k]
             mapper[cum_sum] += 1
         return count

@@ -17,7 +17,7 @@ class Solution:
     #         return uglies_list[n-1]
 
     def nthUglyNumber(self, n: int) -> int:
-        num = [0]*n
+        num = [0] * n
         num[0] = 1
         i2, i3, i5 = 0, 0, 0
         mul_2 = 2
@@ -26,13 +26,13 @@ class Solution:
         for i in range(1, n):
             print(num)
             num[i] = min(mul_2, mul_3, mul_5)
-            if(num[i] == mul_2):
+            if num[i] == mul_2:
                 i2 += 1
-                mul_2 = num[i2]*2
-            if(num[i] == mul_3):
+                mul_2 = num[i2] * 2
+            if num[i] == mul_3:
                 i3 += 1
-                mul_3 = num[i3]*3
-            if(num[i] == mul_5):
+                mul_3 = num[i3] * 3
+            if num[i] == mul_5:
                 i5 += 1
-                mul_5 = num[i5]*5
+                mul_5 = num[i5] * 5
         return num[-1]

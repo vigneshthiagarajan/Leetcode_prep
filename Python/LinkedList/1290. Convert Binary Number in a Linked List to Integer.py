@@ -6,9 +6,8 @@
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
         string_repr = ""
-        while(head!=None):
+        while head != None:
             string_repr += str(head.val)
             head = head.next
         dec_val = int(string_repr, 2)
         return dec_val
-        

@@ -32,7 +32,3 @@ class Solution:
                     counts += 1
 
         return counts
-
-
-
-

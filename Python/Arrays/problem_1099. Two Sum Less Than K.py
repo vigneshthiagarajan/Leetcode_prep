@@ -13,12 +13,12 @@ class Solution:
         ## Two pointers
         nums.sort()
         pointer1 = 0
-        pointer2 = len(nums)-1
+        pointer2 = len(nums) - 1
         ans = -1
-        while(pointer1 < pointer2):
+        while pointer1 < pointer2:
             sum_val = nums[pointer1] + nums[pointer2]
-            if(sum_val < k):
-                if(sum_val > ans):
+            if sum_val < k:
+                if sum_val > ans:
                     ans = sum_val
                 pointer1 += 1
             else:

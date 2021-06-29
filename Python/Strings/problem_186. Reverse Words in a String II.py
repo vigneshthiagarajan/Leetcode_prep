@@ -9,8 +9,8 @@ class Solution:
         n = len(lst)
         start = 0
         end = 0
-        while(start < n):
-            while(end < n and lst[end] != " "):
+        while start < n:
+            while end < n and lst[end] != " ":
                 end += 1
             self.reverse_whole(lst, start, end - 1)
             start = end + 1

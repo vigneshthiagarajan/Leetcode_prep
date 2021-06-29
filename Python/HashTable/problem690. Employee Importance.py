@@ -7,11 +7,13 @@ class Employee:
         self.subordinates = subordinates
 """
 
+
 class Solution:
-    def getImportance(self, employees: List['Employee'], id: int) -> int:
-        employee_map = {e.id : e for e in employees}
+    def getImportance(self, employees: List["Employee"], id: int) -> int:
+        employee_map = {e.id: e for e in employees}
+
         def dfs(eid):
             employee = employee_map[eid]
             return employee.importance + sum(dfs(eid) for eid in employee.subordinates)
+
         return dfs(id)
-        

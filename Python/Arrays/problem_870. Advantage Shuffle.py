@@ -14,5 +14,4 @@ class Solution:
             else:
                 remaining.append(a)
 
-        return [assigned[b].pop() if assigned[b] else remaining.pop()
-                for b in nums2]
+        return [assigned[b].pop() if assigned[b] else remaining.pop() for b in nums2]

@@ -1,5 +1,4 @@
 class MagicDictionary:
-
     def __init__(self):
         """
         Initialize your data structure here.
@@ -17,12 +16,10 @@ class MagicDictionary:
             else:
                 count = 0
                 for i in range(len(word)):
-                    if (word[i] != searchWord[i]):
+                    if word[i] != searchWord[i]:
                         count += 1
-                    if (count >= 2):
+                    if count >= 2:
                         break
                 if count == 1:
                     return True
         return False
-
-

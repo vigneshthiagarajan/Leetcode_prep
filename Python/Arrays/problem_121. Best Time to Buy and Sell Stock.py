@@ -16,6 +16,6 @@ class Solution:
             if prices[i] < min_element_so_far:
                 min_element_so_far = prices[i]
             else:
-                if(prices[i] - min_element_so_far > max_profit):
+                if prices[i] - min_element_so_far > max_profit:
                     max_profit = prices[i] - min_element_so_far
         return max_profit

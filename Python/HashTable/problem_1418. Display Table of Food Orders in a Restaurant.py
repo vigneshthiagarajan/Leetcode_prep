@@ -16,9 +16,13 @@ class Solution:
 
         display = [["Table"] + food_list]
 
-        for table_num, orders_dict in sorted(table_orders.items(), key=lambda t: int(t[0])):
-            row = [str(table_num)] + [str(orders_dict[food])
-                                      if food in orders_dict else '0' for food in food_list]
+        for table_num, orders_dict in sorted(
+            table_orders.items(), key=lambda t: int(t[0])
+        ):
+            row = [str(table_num)] + [
+                str(orders_dict[food]) if food in orders_dict else "0"
+                for food in food_list
+            ]
             display.append(row)
 
         return display

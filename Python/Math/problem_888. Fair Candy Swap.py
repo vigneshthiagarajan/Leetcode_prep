@@ -3,5 +3,5 @@ class Solution:
         SumAlice, SumBob = sum(aliceSizes), sum(bobSizes)
         setBob = set(bobSizes)
         for i in aliceSizes:
-            if i + (SumBob-SumAlice)/2 in setBob:
-                return [i, i + (SumBob-SumAlice)/2]
+            if i + (SumBob - SumAlice) / 2 in setBob:
+                return [i, i + (SumBob - SumAlice) / 2]

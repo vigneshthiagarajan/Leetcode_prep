@@ -7,13 +7,13 @@ class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         length = 0
         temp = head
-        while(temp != None):
+        while temp != None:
             temp = temp.next
             length += 1
-        mid = math.floor(length/2)
+        mid = math.floor(length / 2)
 
         count = 0
-        while(count < mid):
+        while count < mid:
             head = head.next
             count += 1
         return head

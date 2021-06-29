@@ -47,16 +47,17 @@ class Solution:
 
         length = len(prices)
         for i in range(1, len(prices)):
-            left_profits[i] = max(left_profits[i-1], prices[i] - left_min)
+            left_profits[i] = max(left_profits[i - 1], prices[i] - left_min)
             left_min = min(left_min, prices[i])
 
             right = length - i
             right_profits[right] = max(
-                right_profits[right + 1], right_max - prices[right])
+                right_profits[right + 1], right_max - prices[right]
+            )
             right_max = max(right_max, prices[right])
 
         max_profit = 0
         for i in range(0, len(prices)):
-            max_profit = max(max_profit, left_profits[i] + right_profits[i+1])
+            max_profit = max(max_profit, left_profits[i] + right_profits[i + 1])
 
         return max_profit
