@@ -4,7 +4,7 @@ class Solution:
         num = int("".join(num))
         num_sum = num + k
         return_list = []
-        while(num_sum > 0):
+        while num_sum > 0:
             num_sum, digit = divmod(num_sum, 10)
             return_list.insert(0, digit)
         if not return_list:
