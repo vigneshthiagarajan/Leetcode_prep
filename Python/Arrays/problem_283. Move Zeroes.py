@@ -5,7 +5,7 @@ class Solution:
         """
         pointer1 = 0
         for pointer2 in range(len(nums)):
-            if(nums[pointer2] != 0):
+            if nums[pointer2] != 0:
                 temp = nums[pointer1]
                 nums[pointer1] = nums[pointer2]
                 nums[pointer2] = temp

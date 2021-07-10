@@ -4,9 +4,9 @@ class Solution:
         low = 0
         if len(nums) == 0:
             return 0
-        while(low <= high):
-            pivot = int((low + high)/2)
-            if(nums[pivot] == target):
+        while low <= high:
+            pivot = int((low + high) / 2)
+            if nums[pivot] == target:
                 return pivot
             elif nums[pivot] < target:
                 low = low + 1
